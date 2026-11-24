@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5a321c">
+  <title>Artisan Bakery</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2357331f'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='24' fill='%23fffaf1'%3EAB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="toastRoot" class="toast-root" aria-live="polite"></div>
+  <header class="topbar">
+    <button class="brand" data-route="home" aria-label="Artisan Bakery home">
+      <span class="brand-mark">AB</span>
+      <span><strong>Artisan</strong><small>BAKERY</small></span>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button data-route="home">Home</button>
+      <button data-route="products">Products</button>
+      <button data-route="about">About Us</button>
+      <button data-route="contact">Contact Us</button>
+      <button class="mobile-only" data-route="orders">My Orders</button>
+      <button class="mobile-only" data-route="add-product">Add Product</button>
+      <button class="mobile-only" data-route="auth" id="mobileAuthButton">Register / Login</button>
+    </nav>
+    <div class="header-actions">
+      <button id="cartButton" class="icon-button" data-route="cart" aria-label="Shopping cart">
+        <span>Cart</span><b id="cartCount">0</b>
+      </button>
+      <button id="ordersButton" class="text-button" data-route="orders">My Orders</button>
+      <button id="addProductButton" class="owner-button" data-route="add-product" hidden>Add Product</button>
+      <button id="authButton" class="owner-button" data-route="auth">Register / Login</button>
+      <button id="menuButton" class="menu-button" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">AB</span><div><strong>Artisan Bakery</strong><small>Baked fresh with love</small></div></div>
+    <p>© <span id="year"></span> Artisan Bakery. All rights reserved.</p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
